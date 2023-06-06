@@ -1,6 +1,9 @@
 import java.io.*;
 
-/*4 */
+/**
+ * 這個程式用於讀取並顯示指定檔案（test1.txt）的內容。
+ */
+/* 4 */
 public class ex0517_7 {
     public static void main(String[] args) {
         try {
@@ -9,18 +12,12 @@ public class ex0517_7 {
 
             int data = br.read(); // 一次讀取一個字元，並得此字元之ASCII碼
             while (data != -1) {
-                System.out.print((char) data);
-                data = br.read();// 一次讀取一個字元
+                System.out.print((char) data); // 將字元轉換為對應的字元值並顯示
+                data = br.read(); // 一次讀取一個字元
             }
 
-            // String data = br.readLine();
-            // while (data != null) {
-            // System.out.println(data);
-            // data = br.readLine();
-            // }
-
-            br.close();
-            fr.close();
+            br.close(); // 關閉緩衝讀取器
+            fr.close(); // 關閉檔案讀取器
         } catch (IOException e) {
             System.out.println("輸入錯誤。");
         }
