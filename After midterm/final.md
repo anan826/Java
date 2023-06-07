@@ -58,9 +58,9 @@ Dates 段落以日期爲核心，大略說明檔案內容。
 1. 數字加總：將檔案內的前十行數字進行加總。
 2. 數字比較：讀取檔案，比較檔案內的數字何者最大。
 3. 數字加總：將檔案內的數字進行加總。
-4. 類型賦值：創建新的類型，並予以賦值。
-5. 類型函式：在class中寫入函式，使得class可以進行函式操作。
-6. 類型更值：透過撰寫class中的函式，將值進行更改。
+4. 類型賦值：創建新的物件，並予以賦值。
+5. 物件函式：在物件中寫入函式，使得物件可以進行函式操作。
+6. 物件更值：透過撰寫物件中的函式，將值進行更改。
 7. 類型統整：將前幾題進行整合，有檢查、有更改。
 
 ## Topics
@@ -71,7 +71,7 @@ Dates 段落以日期爲核心，大略說明檔案內容。
 Random 模組可以隨機產生數字。
 使用Random模組中的nextInt函式從0到指定的數字（不包括指定數字）中隨機選取一個數字。
 ex:
-```
+```java
     //  Import All the Modules we need.
     import java.util.Scanner;
     import java.util.Random;
@@ -84,4 +84,23 @@ ex:
 ```
 
 ### Class
-Class 類型讓使用者可以更有效率的進行
+Class 類型讓使用者可以更有效率、有系統性的進行操作。
+```java
+class Car
+{
+    int num;
+    double gas;
+    void show()
+    {
+        //...;
+    }
+}
+
+public static void main(String[] args)
+{
+    Car car1 = new Car();//  Create an Object.
+    car1.num = 8888;//  Change the Value in the object.
+    car1.show();//  Call the function you've wrote in the class.
+}
+```
+
